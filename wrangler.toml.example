@@ -1,0 +1,18 @@
+name = "israel-map"
+main = "src/worker.js"
+compatibility_date = "2026-08-01"
+
+# public/ holds the page, the map client and (after `npm run vendor` and `npm run glyphs`) MapLibre and the fonts.
+[assets]
+directory = "public"
+binding = "ASSETS"
+run_worker_first = ["/map/*"]
+
+# The PMTiles archive. Upload a NEW key for every refresh and change TILES_KEY: the URL then changes with the
+# bytes, and no browser or edge cache ever mixes ranges of two archives.
+[[r2_buckets]]
+binding = "MAPS"
+bucket_name = "israel-map"
+
+[vars]
+TILES_KEY = "israel-20261013.pmtiles"

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>מפת ישראל</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; margin: 0; padding: 16px; max-width: 900px; margin-inline: auto; }
+    .map { position: relative; height: 70vh; border-radius: 12px; overflow: hidden; background: #e8e3d8; }
+    .vmap-osm { position: absolute; left: 8px; bottom: 6px; z-index: 2; font-size: 11px; background: rgba(255,255,255,.8); padding: 1px 6px; border-radius: 4px; direction: ltr; }
+    .note { color: #555; }
+  </style>
+</head>
+<body>
+  <h1>מפת ישראל</h1>
+  <p class="note">Vector tiles from our own R2 bucket, drawn by MapLibre. Nothing on this page is loaded from a third party.</p>
+  <div id="map" class="map"></div>
+  <p class="note" id="status"></p>
+  <script type="module">
+    import { drawMap } from "./js/map.js";
+    // Haifa port. Pass { interactive: true } to pan and zoom.
+    const map = await drawMap(document.getElementById("map"), { lat: 32.8191, lng: 34.9983 }, { interactive: true, zoom: 14 });
+    document.getElementById("status").textContent = map ? "" : "No map: no WebGL here, or no tile archive uploaded yet (GET /map/tiles answered 404).";
+  </script>
+</body>
+</html>

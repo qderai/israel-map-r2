@@ -1,0 +1,27 @@
+{
+  "name": "israel-map-r2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A self-hosted vector map of Israel: PMTiles on Cloudflare R2, served by a Worker with range requests, drawn with MapLibre's CSP build. Hebrew labels, no third party at runtime.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "Qder AI (https://qder.ai)",
+  "repository": { "type": "git", "url": "git+https://github.com/qderai/israel-map-r2.git" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "vendor": "node tools/vendor.mjs",
+    "glyphs": "node tools/build-glyphs.mjs",
+    "extract": "node tools/extract-pmtiles.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@mapbox/mapbox-gl-rtl-text": "0.2.3",
+    "maplibre-gl": "4.7.1",
+    "opentype.js": "1.3.4",
+    "pbf": "4.0.1",
+    "pmtiles": "4.5.0",
+    "wawoff2": "2.0.1"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,9 @@
+node_modules/
+*.log
+*.pmtiles
+wrangler.toml
+.wrangler/
+public/vendor/
+public/map/fonts/
+fonts/*.woff2
+fonts/*.ttf
