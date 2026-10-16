@@ -1,4 +1,4 @@
-// Copyright 2026 Qder AI (Itay Funes). Licensed under the Apache License, Version 2.0.
+// Copyright 2026 Qder AI. Licensed under the Apache License, Version 2.0.
 /**
  * A small map with a pin, drawn by MapLibre GL from
  * files we serve ourselves: /vendor/maplibre (the library, its RTL plugin and pmtiles), /map/tiles/<key>

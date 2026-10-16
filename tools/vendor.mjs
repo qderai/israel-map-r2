@@ -1,4 +1,4 @@
-// Copyright 2026 Qder AI (Itay Funes). Licensed under the Apache License, Version 2.0.
+// Copyright 2026 Qder AI. Licensed under the Apache License, Version 2.0.
 // Copies MapLibre's CSP build, the pmtiles protocol and the RTL text plugin from node_modules into public/vendor,
 // so the page loads nothing from a third party. Run after `npm install`.
 import { copyFileSync, mkdirSync } from "node:fs";

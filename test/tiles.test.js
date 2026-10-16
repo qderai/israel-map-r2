@@ -1,4 +1,4 @@
-// Copyright 2026 Qder AI (Itay Funes). Licensed under the Apache License, Version 2.0.
+// Copyright 2026 Qder AI. Licensed under the Apache License, Version 2.0.
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { MAX_RANGE, glyphPath, parseRange, servableRange, serveTiles, tilesKey, currentTiles } from "../src/tiles.js";
